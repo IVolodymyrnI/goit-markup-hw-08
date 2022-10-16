@@ -1,0 +1,97 @@
+.section--grey-bg {
+	background-color: $secondary-page-color;
+	@extend .section;
+}
+
+.team-list {
+	list-style-type: none;
+	text-align: center;
+
+	@media screen and (min-width: 768px) {
+		display: flex;
+		flex-wrap: wrap;
+		margin: -15px;
+	}
+}
+
+.team-list__item {
+
+	background-color: $primary-page-color;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+	border-radius: 0px 0px 4px 4px;
+
+	@media screen and (max-width: 767px) {
+		margin-bottom: 30px;
+	}
+
+	@media screen and (min-width: 768px) {
+		max-width: calc((100% - 60px) / 2);
+		width: 100%;
+		margin: 15px;
+	}
+
+	@media screen and (min-width: 1200px) {
+		max-width: calc((100% - 120px) / 4);
+		width: 100%;
+		margin: 15px;
+	}
+}
+
+.team-member__photo {
+	@media screen and (min-width: 768px) {
+		min-height: 374px;
+		height: 100%;
+	}
+
+	@media screen and (min-width: 1200px) {
+		min-height: 260px;
+		height: 100%;
+	}
+}
+
+.team-member__content {
+	padding: 30px 0 25px 0;
+}
+
+.team-member__name {
+	margin-bottom: 10px;
+
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.19;
+	letter-spacing: 0.03em;
+}
+
+.team-member__position {
+	margin-bottom: 16px;
+
+	font-size: 16px;
+	line-height: 1.19;
+	letter-spacing: 0.03em;
+	color: $primary-text-color;
+}
+
+.social-list {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	list-style-type: none;
+}
+
+.social-list__item {
+	&:not(:first-child) {
+		margin-left: 10px;
+	}
+}
+
+.social-list__link {
+	@extend %social-list__link;
+}
+
+.social-list__icon {
+	transition: fill $time-cubic-bezier;
+
+	.social-list__link:hover & {
+		fill: $primary-page-color;
+	}
+}

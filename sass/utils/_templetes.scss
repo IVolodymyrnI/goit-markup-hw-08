@@ -1,0 +1,40 @@
+%social-list__link {
+	fill: $primary-icon-color;
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: background-color $time-cubic-bezier;
+
+	&:hover {
+		background-color: $accent-color;
+	}
+}
+
+%btn {
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 1.88;
+	letter-spacing: 0.06em;
+
+	background-color: $accent-color;
+	color: $secondary-text-color;
+	border: none;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+	border-radius: 4px;
+
+	transition: background-color $time-cubic-bezier,
+		transform $time-cubic-bezier;
+
+	&:active {
+		transform: scale(0.95);
+	}
+
+	&:hover,
+	&:focus {
+		background-color: $hover-btn-color;
+		cursor: pointer;
+	}
+}

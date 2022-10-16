@@ -1,0 +1,166 @@
+.btn-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	list-style-type: none;
+	margin-bottom: 40px;
+
+	@media screen and (min-width: 1200px) {
+		margin-bottom: 50px;
+	}
+}
+
+.btn-list__item {
+	&:not(:first-child) {
+		margin-left: 8px;
+	}
+
+	@media screen and (max-width: 1199px) {
+		&:nth-child(-n+4) {
+			margin-bottom: 15px;
+		}
+	}
+}
+
+.btn-list__label {
+	display: block;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.62;
+	letter-spacing: 0.03em;
+
+
+	border-radius: 4px;
+	padding: 6px 26px;
+	color: $header-color;
+	background-color: $secondary-page-color;
+	transition: color $time-cubic-bezier, background-color $time-cubic-bezier, box-shadow $time-cubic-bezier;
+
+	&:hover,
+	&:focus {
+		color: $secondary-text-color;
+		background-color: $accent-color;
+		box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+	}
+
+	.btn-list__input:checked+& {
+		color: $primary-page-color;
+		background-color: $accent-color;
+		box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+			0px 1px 2px rgba(0, 0, 0, 0.08),
+			0px 2px 2px rgba(0, 0, 0, 0.12);
+	}
+
+	&--wider-btn {
+		padding: 6px 53px;
+	}
+
+}
+
+.projects-list {
+	list-style-type: none;
+
+	@media screen and (min-width: 768px) {
+		display: flex;
+		flex-wrap: wrap;
+		justify-self: center;
+		margin: -15px;
+	}
+}
+
+.projects-list__item {
+	@media screen and (max-width: 767px) {
+		&:not(:last-child) {
+			margin-bottom: 30px;
+		}
+	}
+
+	@media screen and (min-width: 768px) {
+		display: flex;
+		max-width: calc((100% - 60px) / 2);
+		width: 100%;
+		margin: 15px;
+
+	}
+
+	@media screen and (min-width: 1200px) {
+		max-width: calc((100% - 90px) / 3);
+	}
+}
+
+.project {
+	display: flex;
+	flex-direction: column;
+	text-decoration: none;
+	transition: box-shadow $time-cubic-bezier;
+
+	&:hover,
+	&:focus {
+		box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+			0px 4px 4px rgba(0, 0, 0, 0.06),
+			1px 4px 6px rgba(0, 0, 0, 0.16);
+	}
+
+	&:hover .project__text,
+	&:focus .project__text {
+		transform: translateY(0);
+	}
+}
+
+.project__overlay {
+	position: relative;
+	overflow: hidden;
+}
+
+.project__text {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: translateY(100%);
+	padding: 0 5vw;
+	padding-top: 16vw;
+	padding-bottom: 22vw;
+
+	font-size: 18px;
+	line-height: 1.56;
+	letter-spacing: 0.03em;
+	color: $secondary-text-color;
+	background-color: rgba(33, 150, 243, 0.9);
+	transition: transform $time-cubic-bezier;
+
+	@media screen and (min-width: 480px) {
+		padding: 77px 24px 105px 24px;
+	}
+
+	@media screen and (min-width: 768px) {
+		padding: 49px 24px 105px 24px;
+	}
+
+	@media screen and (min-width: 1200px) {
+		padding: 63px 24px 91px 24px;
+	}
+}
+
+.project__content {
+	padding: 24px 20px;
+	flex-grow: 1;
+	border-left: 1px solid #EEEEEE;
+	border-right: 1px solid #EEEEEE;
+	border-bottom: 1px solid #EEEEEE;
+}
+
+.project__name {
+	font-size: 18px;
+	line-height: 2;
+	letter-spacing: 0.06em;
+	color: $header-color;
+}
+
+.project__type {
+	font-size: 16px;
+	line-height: 1.88;
+	letter-spacing: 0.03em;
+	color: $primary-text-color;
+}

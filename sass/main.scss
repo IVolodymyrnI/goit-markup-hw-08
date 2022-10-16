@@ -1,0 +1,14 @@
+@import "./utils/variables";
+@import "./base/common";
+@import "./utils/utils";
+@import "./utils/templetes.scss";
+@import "./layouts/header";
+@import "./layouts/common/logo";
+@import "./layouts/index/hero-section";
+@import "./layouts/index/our-rules";
+@import "./layouts/index/what-we-do";
+@import "./layouts/index/our-team";
+@import "./layouts/index/customers";
+@import "./layouts/portfolio/projects";
+@import "./layouts/footer";
+@import "./components/modal-window/index-modal-window/index-modal-window";

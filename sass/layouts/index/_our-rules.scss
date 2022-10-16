@@ -1,0 +1,72 @@
+.rules-list {
+	list-style-type: none;
+
+	@media screen and (min-width: 768px) {
+		display: flex;
+		flex-wrap: wrap;
+		margin: -15px;
+	}
+
+	@media screen and (min-width: 1200px) {
+		display: flex;
+		margin: 0;
+	}
+}
+
+.rules-list__item {
+	@media screen and (max-width: 767px) {
+		&:not(:last-child) {
+			margin-bottom: 30px;
+		}
+	}
+
+	@media screen and (min-width: 768px) {
+		max-width: calc((100% - 60px) / 2);
+		margin: 15px;
+		width: 100%;
+	}
+
+	@media screen and (min-width: 1200px) {
+		max-width: calc((100% - 90px) / 4);
+		margin: 0;
+
+		&:not(:first-child) {
+			margin-left: 30px;
+		}
+	}
+}
+
+.rule-list__icon {
+	height: 120px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: $secondary-page-color;
+	margin-bottom: 30px;
+
+	@media screen and (min-width: 480px) {
+		width: 100%;
+	}
+}
+
+.rule-list__label {
+	margin-bottom: 10px;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 1.14;
+	text-align: center;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+	color: $header-color;
+
+	@media screen and (min-width: 768px) {
+		text-align: left;
+	}
+}
+
+.rule-list__text {
+	font-size: 14px;
+	line-height: 1.71;
+	letter-spacing: 0.03em;
+	color: $primary-text-color;
+}

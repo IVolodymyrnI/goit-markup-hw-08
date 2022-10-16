@@ -1,0 +1,43 @@
+// Normalize
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+	margin: 0;
+}
+
+ul {
+	padding-left: 0;
+}
+
+img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+input:-webkit-autofill {
+	transition: background-color 5000000s ease-in-out 0s;
+}
+
+button {
+	padding: 0;
+}
+
+// Utils
+.is-visually-hidden {
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+	height: 1px;
+	border: 0;
+	padding: 0;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	margin: -1px;
+}
